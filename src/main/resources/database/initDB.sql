@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS posts;
+DROP SEQUENCE IF EXISTS posts_id_seq;
+
+CREATE TABLE IF NOT EXISTS posts
+(
+    id    INTEGER PRIMARY KEY ,
+    title  VARCHAR(128) NOT NULL ,
+    description  VARCHAR(256) NOT NULL ,
+    text VARCHAR(512) NOT NULL ,
+    created_at TIMESTAMP
+);
+CREATE SEQUENCE posts_id_seq START WITH 1 INCREMENT BY 1;
